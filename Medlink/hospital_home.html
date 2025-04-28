@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Dash</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="health-podcast.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="medlink-high-resolution-logo-transparent.png" alt="MedLink Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="displayapp.php">Appointments</a></li>
+                    <li><a href="add_doctor.php">Add Doctors</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contain">
+            <!-- Blood Availability Section -->
+            <section class="dashboard-section">
+                <h2>Blood Availability</h2>
+                <form id="blood-form" action="update_blood.php" method="post">
+                    <label for="blood-type">Blood Type:</label>
+                    <select id="blood-type" name="blood_type" required>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                    <label for="units">Units Available:</label>
+                    <input type="number" id="units" name="units" required>
+                    <button type="submit">Update Blood Availability</button>
+                </form>
+                
+            </section>
+
+            <!-- Bed Availability Section -->
+            <section class="dashboard-section">
+                <h2>Bed Availability</h2>
+                <form id="beds-form" action="update_beds.php" method="post">
+                    <label for="total-beds">Total Beds:</label>
+                    <input type="number" id="total-beds" name="total_beds" required>
+                    <label for="occupied-beds">Occupied Beds:</label>
+                    <input type="number" id="occupied-beds" name="occupied_beds" required>
+                    
+                    <label for="bed-type">Bed Type:</label>
+                    <select id="bed-type" name="bed_type" required>
+                        <option value="AC">AC</option>
+                        <option value="Non-AC">Non-AC</option>
+                        <option value="Single">Single</option>
+                        <option value="Double">Double</option>
+                    </select>
+                    
+                    <button type="submit">Update Bed Availability</button>
+                </form>
+                
+            </section>
+
+            <!-- Doctor Availability Section -->
+            <section class="dashboard-section">
+                <h2>Doctor Availability</h2>
+                <form id="doctors-form" action="update_doc.php" method="post">
+                    <label for="specialization">Specialization:</label>
+                    <select id="specialization" name="specialization" required>
+                        <option value="Physician">Physicians</option>
+                        <option value="Gastrology">Gastrology</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Dermatology">Dermatology</option>
+                    </select>
+                    <label for="available-doctors">Available Doctors:</label>
+                    <input type="number" id="available-doctors" name="available_doctors" required>
+                    <label for="unavailable-doctors">Unavailable Doctors:</label>
+                    <input type="number" id="unavailable-doctors" name="unavailable_doctors" required>
+                    <button type="submit">Update Doctor Availability</button>
+                </form>
+                
+            </section>
+
+            <!-- Emergency Alerts Section -->
+            <section class="dashboard-section">
+                <h2>Emergency Alerts</h2>
+                <form id="emergency-alert-form" action="send_emer.php" method="post">
+                    <label for="alert-type">Alert Type:</label>
+                    <select id="alert-type" name="alert_type" required>
+                        <option value="Fire">Fire</option>
+                        <option value="Natural Disaster">Natural Disaster</option>
+                        <option value="Mass Casualty">Mass Casualty</option>
+                        <option value="Security Threat">Security Threat</option>
+                        <option value="Power Outage">Power Outage</option>
+                    </select>
+                    <label for="alert-details">Details:</label>
+                    <textarea id="alert-details" name="alert_details" rows="4" required></textarea>
+                    <button type="submit">Send Alert</button>
+                </form>
+                
+            </section>
+
+            <!-- Test Results Section -->
+            <section class="dashboard-section">
+                <h2>Laboratory Test Results</h2>
+                <form id="test-results-form" action="submit_tests.php" method="post">
+                    <label for="patient-id">Patient ID:</label>
+                    <input type="number" id="patient-id" name="patient_id" required>
+                    <label for="test-type">Test Type:</label>
+                    <input type="text" id="test-type" name="test_type" required>
+                    <label for="test-result">Test Result:</label>
+                    <textarea id="test-result" name="test_result" rows="4" required></textarea>
+                    <label for="test-date">Test Date:</label>
+                    <input type="date" id="test-date" name="test_date" required>
+                    <button type="submit">Submit Test Result</button>
+                </form>
+                
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Address: Gunupur, At – Gobriguda, Po- Kharling, Gunupur, Odisha 765022</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contactmedlink@gmail.com</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="news">
+                <p>Stay updated with our latest health tips and news.</p>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

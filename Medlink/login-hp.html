@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Healthcare Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="medlink-high-resolution-logo-transparent.png" alt="MedLink Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Login</a>
+                        <div class="dropdown-content">
+                            <a href="login-user.html">User Login</a>
+                            <a href="login-hp.html">Hospital Login</a>
+                            <a href="index.html#email">New User</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+
+            <form action="login_hospital.php" method="post">
+                <div class="form-group">
+                    <label for="hospital_id">Hospital ID</label>
+                    <input type="text" id="hospital_id" name="hospital_id" required placeholder="Enter Hospital Id">
+                </div>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+            </form>
+
+            <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+
+        <div class="doc-pic">
+            <img src="hp.png" alt="Hospital Image">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Address: Gunupur, At – Gobriguda, Po- Kharling, Gunupur, Odisha 765022</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contactmedlink@gmail.com</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

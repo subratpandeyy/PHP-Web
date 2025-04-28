@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Care - Medlink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+            <img src="medlink-high-resolution-logo-transparent.png">
+            </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Login</a>
+                    <div class="dropdown-content">
+                        <a href="login-user.html">User Login</a>
+                        <a href="login-hp.html">Hospital login</a>
+                        <a href="index.html#email">New User</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login-section">
+            <div class="login-container">
+            <h2>Quick Access</h2>
+            <button id="ambulance-btn" class="btn">Call Ambulance</button>
+            <button id="hospital-btn" class="btn">Nearest Hospitals</button>
+            <button id="hotline-btn" class="btn">Emergency Hotline</button>
+        </section>
+
+
+        <div class="login-container">
+        <section id="sos">
+            <h2>SOS Alert</h2>
+            <button id="sos-btn" class="btn">Send SOS Alert</button>
+        </section>
+        </div>
+        <div class="login-container">
+        <section id="first-aid">
+            <h2>First Aid Tips</h2>
+            <div id="tips">
+                <h3>Heart Attack</h3>
+                <p>If you suspect someone is having a heart attack, call emergency services immediately and provide them with aspirin if available.</p>
+                
+                <h3>Choking</h3>
+                <p>Perform the Heimlich maneuver by standing behind the person and delivering quick, upward abdominal thrusts.</p>
+
+                <h3>Bleeding</h3>
+                <p>Apply pressure to the wound using a clean cloth and seek medical attention as quickly as possible.</p>
+            </div>
+            
+            </section>
+            </div>
+        </section>
+    </main>
+    
+
+</body>
+<script>document.getElementById('ambulance-btn').addEventListener('click', function() {
+    alert('Calling ambulance...');
+    window.location.href = 'tel:112'; // Replace with the actual ambulance number in your region
+});
+
+document.getElementById('hospital-btn').addEventListener('click', function() {
+    alert('Showing nearest hospitals...');
+    // Here you can integrate a map API like Google Maps to show nearby hospitals
+});
+
+document.getElementById('hotline-btn').addEventListener('click', function() {
+    alert('Calling emergency hotline...');
+    window.location.href = 'tel:911'; // Replace with the actual emergency hotline number in your region
+});
+
+document.getElementById('sos-btn').addEventListener('click', function() {
+    alert('Sending SOS alert to your emergency contacts...');
+    // Here you can integrate the feature to send an SOS alert with the user’s location
+});
+function initMap() {
+    const userLocation = { lat: -34.397, lng: 150.644 }; // Example coordinates
+    const map = new google.maps.Map(document.getElementById('map-container'), {
+        zoom: 12,
+        center: userLocation
+    });
+
+    const marker = new google.maps.Marker({
+        position: userLocation,
+        map: map
+    });
+}
+
+document.getElementById('hospital-btn').addEventListener('click', function() {
+    initMap();
+});
+</script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        /* Style for the chat pop-up container */
+        #chatbox-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        /* Header of the chat pop-up */
+        #chatbox-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        /* Chat messages area */
+        #chatbox {
+            padding: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Input area at the bottom */
+        #chatbox-input {
+            display: flex;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        #userMessage {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Chatbot pop-up container -->
+    <div id="chatbox-container">
+        <!-- Header of the chat pop-up -->
+        <div id="chatbox-header">Chatbot</div>
+        
+        <!-- Chat messages will appear here -->
+        <div id="chatbox">
+            <!-- Chat messages will appear here -->
+        </div>
+
+        <!-- Input area for sending messages -->
+        <div id="chatbox-input">
+            <input type="text" id="userMessage" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to start the conversation
+        function startConversation() {
+            const chatbox = document.getElementById('chatbox');
+            const initialMessage = 'Hello! How can I assist you today?';
+            chatbox.innerHTML += <p><strong>Bot:</strong> ${initialMessage}</p>;
+        }
+
+        // Function to handle sending the message
+        function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+
+            fetch('http://localhost:3000/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const chatbox = document.getElementById('chatbox');
+                chatbox.innerHTML += <p><strong>You:</strong> ${userMessage}</p>;
+                chatbox.innerHTML += <p><strong>Bot:</strong> ${data.reply}</p>;
+                document.getElementById('userMessage').value = '';
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Start the conversation when the page loads
+        window.onload = startConversation;
+    </script>
+</body>
+</html>

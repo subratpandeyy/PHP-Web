@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="health-podcast.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+            <img src="medlink-high-resolution-logo-transparent.png">
+            </div>
+            <nav>
+                <ul>
+                    
+                    <li><a href="#services">More Options</a>
+                    <li><a href="new_hp.php">Hospital Register</a>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Login</a>
+                        <div class="dropdown-content">
+                            <a href="login-user.html">User Login</a>
+                            <a href="login-hp.html">Hospital login</a>
+                            <a href="chemist.php">Chemist login</a>
+                        </div>
+                    </li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to MedLink</h2>
+                <img src="health-podcast.png">
+                <p>Your health is our top priority. <br>We offer comprehensive care with a team of dedicated professionals.<br>
+                    Connect with reliable hospitals and doctors in your area. <br>
+                    Our service simplifies finding and booking the right healthcare provider, <br>
+                    so you can focus on getting better, faster.</p>
+                <a href="#email" class="btn-primary">Join Us</a>
+            </div>
+            <div class="hlth">
+                <img src="web-removebg-preview.png">
+            </div>
+        </section>
+
+        <div class="dis">
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Our Organization is committed to providing <br>the highest quality healthcare to our community. <br>
+                    We have relationships with excellent physicians and first-rate hospitals.<br>
+                    With state-of-the-art facilities and a dedicated team of professionals, we ensure compassionate and comprehensive care.<br>
+                    </p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service">
+                    <b>Emergency Care</b><br>
+                    24/7 emergency services with a highly skilled team.
+                </div>
+                <div class="service">
+                    <b>Outpatient Services</b><br>
+                    Comprehensive outpatient care for various medical needs.
+                </div>
+                <div class="service">
+                    <b>Specialty Clinics</b><br>
+                    Expert care in various medical specialties.
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Address: Gunupur, At – Gobriguda, Po- Kharling, Gunupur, Odisha 765022</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: contactmedlink@gmail.com</p>
+            </div>
+        </section>
+        </div>
+
+        <section id="sign-up">
+            <div class="container">
+                <h2>Register</h2>
+                <form id="sign-form" action="register.php" method="POST" onsubmit="return validateForm()">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit">Sign up</button>
+                </form>
+                
+                <script>
+                function validateForm() {
+                    var email = document.getElementById("email").value;
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(email)) {
+                        alert("Please enter a valid email address.");
+                        return false;
+                    }
+                    return true;
+                }
+                </script>
+                
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MedLink. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
