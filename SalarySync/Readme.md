@@ -43,7 +43,7 @@ SalarySync is a comprehensive web-based salary management system designed to han
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/yourusername/salarysync.git
+   git clone https://github.com/subratpandeyy/salarysync.git
    ```
 
 2. Set up the database
