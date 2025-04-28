@@ -1,0 +1,844 @@
+/* Global Styles */
+* {
+    box-sizing: border-box; 
+}
+
+body {
+   background: url('cool-background.png') no-repeat center center fixed;
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+}
+
+.tp {
+    border: none;
+    /* background-color: rgba(10, 74, 203, 0.5); */
+    background: url(banner.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: default;
+    color: #fff;
+}
+.tp h1{
+    text-align: left;
+    cursor: pointer;
+}
+
+
+#opts {
+    padding: 15px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    max-width: 30vw;
+    gap: 20px;
+    text-align: center;
+}
+
+#opts a {
+    background-color:rgba(10, 74, 203, 0.5) ;
+    border: none;
+    padding: 25px;
+    /* box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.749); */
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+}
+
+#opts a:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.container nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.395);
+}
+
+.logo img {
+    height: 6vh;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #0a4acb;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+button {
+    background-color: #0d1f40;
+    border: 1px solid #0d1f40;
+    transition: background-color 0.3s;
+    width: auto;
+    height: 2em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+button:hover {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.395);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.content {
+    padding: 10px;
+}
+
+/* About Section */
+
+.container .abt {
+    display: grid;
+    place-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4em;
+}
+
+.abt {
+    height: auto;
+    border: none;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.749);
+    padding: 20px;
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.abt p {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.785);
+}
+
+.abt p small {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.681);
+}
+
+/* Table Styling */
+table {
+    margin: 0 auto;
+    height: auto;
+    width: 60vw;
+    background-color: rgba(10, 74, 203, 0.5);
+}
+
+table tr{
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid black;
+    text-align: center;
+    height: 100%;
+}
+
+table td{
+    padding: 10px 20px;
+}
+
+table th {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    height: 2vh;
+}
+
+#status {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+#status:hover,
+#status:focus {
+    background-color: #e2e2e2;
+    border-color: #aaa;
+}
+
+
+/* Add Employee Form */
+
+.employee-list {
+    margin-left: 5%;
+    align-items: center;
+}
+
+.employee-list h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.employee-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employee-list th, .employee-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.employee-list th {
+    font-weight: bold;
+}
+
+/* Feedback */
+.feedback-list {
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(10, 74, 203, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-list h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.feedback-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #fff;
+    background-color: rgba(194, 197, 204, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.feedback-item p strong {
+    color: #fff;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+
+#login-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.add-emp form { 
+    margin-top: 2em;
+    margin-left: 4em;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 300px;
+    background-color: rgba(10, 74, 203, 0.5);
+    height: auto;
+}
+
+.add-ded {
+    padding: 20px;
+}
+
+.add-ded form {
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* max-width: 300px; */
+    background-color: rgba(10, 74, 203, 0.5);
+    height: auto;
+}
+
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.input-group input {
+    background-color: rgba(194, 197, 204, 0.5);
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 22px;
+    font-size: 16px;
+}
+
+/* charts */
+.chart-container {
+    width: 50%;                  /* Adjust the width of the chart container */
+    float: right;                /* Align the chart container to the right */
+    margin: 20px;                /* Space around the chart */
+    padding: 20px;               /* Padding inside the container */
+    border-radius: 12px;         /* Smooth rounded corners */
+    /* background-color: rgba(194, 197, 204, 0.5); */
+}
+
+.chart-title {
+    text-align: center;          /* Center-align the chart title */
+    font-size: 1.8em;            /* Larger font for the title */
+    font-weight: bold;           /* Bold title for emphasis */
+    color: #fff;                 /* Darker color for title */
+    margin-bottom: 15px;         /* Spacing between title and chart */
+}
+
+canvas {
+    display: block;
+    max-width: 100%;             /* Ensure the chart stays within container */
+    height: auto;                /* Maintain aspect ratio of chart */
+}
+
+.chartjs-legend {
+    font-size: 1.2em;            /* Make the legend text larger */
+    font-weight: bold;           /* Make the legend labels bold */
+    color: #fff;                 /* Dark color for the legend */
+}
+
+
+
+/* Contact Form */
+
+.cont-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+}
+
+.contact-form {
+    background: rgba(10, 74, 203, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.contact-form input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 22px;
+}
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #0a4acb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit{
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+.contact-form button:hover {
+    background-color: #1a3b78;
+}
+
+/* Sevices page */
+.s-section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: transparent;
+    border-radius: 8px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.749);
+}
+
+.service {
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.749);
+    border-radius: 5px;
+    background: rgba(194, 197, 204, 0.5);
+    transition: 1s;
+}
+
+.service:hover{
+    transform: scale(1.02);
+    background:rgba(10, 74, 203, 0.5);
+    z-index:2;
+    color: #fff;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    margin: 0 auto;
+    z-index:2;
+    background:rgba(10, 74, 203, 0.5);
+}
+
+
+.starting{
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.starting:hover{
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 90%;
+    transform: scale(1.02);
+    z-index:2;
+    background:rgba(10, 74, 203, 0.5);
+    color: #fff;
+}
+.ending {
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s;
+}
+.ending:hover{
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 90%;
+    transform: scale(1.02);
+    z-index:2;
+    background:rgba(10, 74, 203, 0.5);
+    color: #fff;
+}
+a {
+    color: #0a4acb;
+    text-decoration: none;
+}
+
+
+/* salary payment */
+
+.salary-details {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.salary-details p {
+    margin: 10px 0;
+}
+
+.pay-salary-container {
+    width: 50%;
+    margin: 20px auto;
+    color: #fff;
+    background-color: rgba(10, 74, 203, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border-radius: 23px;
+    border: none;
+}
+
+/* drop down in view page */
+.dd{
+    background-color: rgba(10, 74, 203, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    max-width: 18vw;
+}
+
+.dd label{
+    color: #fff;
+}
+
+.dd form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* User page */
+
+
+        .login-section .container-user {
+            margin: 0 auto;
+        }
+
+        .container-user {
+            background: rgba(10, 74, 203, 0.5);
+            padding: 30px;
+            width: 450px;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: white;
+            text-align: center;
+        }
+
+        input[type="month"] {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 5px;
+            border: none;
+        }
+
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #0a4acb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        } 
+
+        input[type="submit"]:hover {
+            background-color: #2d63ce;
+        }
+
+        .feedback-btn {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: none;
+            background-color: rgba(194, 197, 204, 0.5);
+        }
+        textarea::placeholder {
+            color: #999;
+        }
+
+        .feedback-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .result p {
+            font-size: 1.3rem;
+            margin: 12px 0;
+        }
+
+        .result p span {
+            font-weight: bold;
+        }
+
+        /* Attendance table */
+
+        .attendance-container { 
+            margin-right: 5em;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        
+        .attendance-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        } 
+        
+        .attendance-table th, .attendance-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        .attendance-table th {
+            background-color: #4a90e2;
+            color: white;
+        }
+    
+        
+        .attendance-table h1 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        
+        .attendance-table form {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        /* Style the action buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+    justify-content: center;
+}
+
+.action-buttons form {
+    margin: 0;
+}
+
+button[type="submit"] {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+button[type="submit"]:first-child {
+    background-color: #3498db;
+    color: white;
+}
+
+button[type="submit"]:last-child {
+    background-color: #0a4acb;
+    color: white;
+}
+
+        
+
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#bbb6c6, #0a4acb);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+    h1,h2{
+        font-size: 22px;
+    }
+
+    .container{
+        font-size: 18px;
+    }
+
+    nav ul li a{
+        font-size: 18px;
+    }
+
+    .logo img {
+        height: 8vh;
+    }
+
+    table {
+        width: 90vw;
+        height: auto;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .abt {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    form{
+        width: 100%;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 5px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .login-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* General styles */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #8f8f8f;
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
